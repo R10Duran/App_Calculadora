@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Body-inicio*/
+body{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(blue, black );
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Body-fim*/
+
+
+/* container-inicio*/
+.container{
+    background: linear-gradient(blue, black);
+    text-align: center;
+    height: 100vh;
+}
+
+.container h1{
+    color: white;
+    margin-top: 20px;
+}
+/* container-fim*/
+
+/*calculadora-inicio*/
+.calculadora{
+    width: 300px;
+    height: 400px;
+    background-color: #2e2c2c;
+    margin: 20% auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "vis vis vis vis"
+    "cl exc div mul"
+    "nove oito sete mais"
+    "seis cinco quatro menos"
+    "tres dois um igual"
+    "zero zero ponto igual";
+    grid-gap: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+/*calculadora-fim*/
+
+/*visor-inicio*/
+.visor{
+    width: 285px;
+    height: 50px;
+    background-color: rgba(184, 136, 15, 0.849);
+    grid-area: vis;
+    margin: auto;
+    text-align: right;
+    border-radius: 5px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.visor h1{
+    margin: 8px 0 0 8px;
+    color: rgb(20, 20, 20);
+
+}
+/*visor-fim*/
+
+/*conteúdo botão-inicio*/
+.calculadora input{
+    background-color: rgb(103, 117, 117);
+    font-weight: bold;
+    font-size: large;
+    border-radius: 7px;
+}
+
+.calculadora input:hover{
+    background-color: rgb(56, 53, 53);
+    color: white;
+}
+
+.clear{
+    grid-area: cl;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.igualdade{
+    grid-area: igual;
+}
+/*conteudo botão-fim*/
+
